@@ -1,61 +1,36 @@
-import React from 'react';
-import fs from 'fs';
-import path from 'path';
-import matter from 'gray-matter';
-import remark from 'remark';
-import remarkHtml from 'remark-html';
+import React from "react";
+import { convertMdToHtml, getPostBySlug, getSlugs } from "../../utils/common";
 
 export default function Post(props) {
-  const { slug, content } = props;
-  console.log({ slugProps: slug });
-  console.log({ contentProps: content });
+  const { slug, content, title } = props;
   return (
     <div>
-      <h1>{slug}</h1>
-      <div dangerouslySetInnerHTML={{ __html: content }}/>
+      <h1>{title}</h1>
+      <div dangerouslySetInnerHTML={{ __html: content }} />
     </div>
   );
-};
-
-function convertToSlug(str) {
-  return str
-    .toLowerCase()
-    .replace(/ /g,'-')
-    .replace(/[^\w-]+/g,'')
-    ;
 }
 
 export async function getStaticProps(props) {
-  console.log({ staticProps: props })
-  const { slug, content } = props.params;
-  const htmlContent = await remark().use(remarkHtml).process(content);
+  const { slug } = props.params;
+  const post = getPostBySlug(slug);
+  const htmlContent = await convertMdToHtml(post.content);
   return {
     props: {
       slug: slug,
+      title: post.title,
       content: htmlContent.toString(),
-    }
-  }
+    },
+  };
 }
 
 export async function getStaticPaths() {
-  const postFolderPath = path.join(process.cwd(), 'posts');
-  const posts = fs.readdirSync(postFolderPath);
-  const postProps = posts.map(post => {
-    const postContent = fs.readFileSync(path.join(postFolderPath, post), 'utf8');
-    const { data, content } = matter(postContent);
-    return {
-      slug: data.slug,
-      content,
-    }
-  })
   return {
-    paths: postProps.map(post => ({
+    paths: getSlugs().map((slug) => ({
       params: {
-        slug: post.slug,
-        content: post.content,
-      }
+        slug,
+      },
     })),
-    // paths: [{ params: { slug: "123" }}],
     fallback: false,
-  }
+  };
 }
