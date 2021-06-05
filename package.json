@@ -2,7 +2,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "static": "next build && next export -o docs/"
   },
   "dependencies": {
     "clsx": "^1.1.1",
