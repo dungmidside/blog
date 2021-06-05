@@ -1,0 +1,22 @@
+@import "../../styles/variables.scss";
+
+.postTitle {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-bottom: 30px;
+  @include mediaQuery('md') {
+    flex-wrap: nowrap;
+  }
+}
+.postTitleDate {
+  margin-right: 20px;
+  color: $color-extra-info;
+}
+.postTitleText {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: $color-primary;
+  text-decoration: none;
+}
+

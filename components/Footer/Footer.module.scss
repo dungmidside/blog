@@ -1,0 +1,11 @@
+@import '../../styles/variables';
+
+.wrapper {
+  margin-top: 50px;
+  padding-top: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid $color-extra-info;
+}

@@ -1,0 +1,18 @@
+@import '../../styles/variables';
+
+.wrapper {
+
+}
+
+.title {
+  font-weight: bold;
+  color: $color-primary;
+}
+
+.content {
+  @include contentMaxWidth();
+  font-size: 1.2rem;
+  line-height: 40px;
+  font-family: "Fira Sans", sans-serif;
+}
+

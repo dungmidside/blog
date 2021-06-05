@@ -1,12 +1,17 @@
 import React from "react";
 import { convertMdToHtml, getPostBySlug, getSlugs } from "../../utils/common";
+import styles from "./post.module.scss";
+import Footer from "../../components/Footer/Footer";
 
 export default function Post(props) {
   const { slug, content, title } = props;
   return (
-    <div>
-      <h1>{title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: content }} />
+    <div className={styles.wrapper}>
+      <h1 className={styles.title}>{title}</h1>
+      <div className={styles.content}>
+        <span className="markdown-content" dangerouslySetInnerHTML={{ __html: content }} />
+      </div>
+      <Footer />
     </div>
   );
 }

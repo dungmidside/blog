@@ -1,0 +1,9 @@
+@import "../../styles/variables.scss";
+
+.title {
+  font-size: 2rem;
+  color: $color-base;
+  a {
+    color: black;
+  }
+}

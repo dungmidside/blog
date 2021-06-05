@@ -1,0 +1,12 @@
+body {
+  font-family: 'Fira Code', monospace;
+  background-color: #EBEBEB;
+}
+
+a {
+  text-decoration: none;
+  color: #dd2020;
+  &:visited {
+    color: #dd2020;
+  }
+}

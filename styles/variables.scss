@@ -1,0 +1,25 @@
+// color
+$color-base: #000000;
+$color-primary: #dd2020;
+$color-extra-info: #767676;
+
+$content-maxWidth: 800px;
+
+// breakpoints
+$breakpoints: (
+  'sm': 640px,
+  'md': 768px,
+  'lg': 1024px,
+  'xl': 1280px,
+  '2xl': 1546px,
+);
+
+@mixin mediaQuery($size) {
+  @media (min-width: map-get($breakpoints, $size)) {
+    @content;
+  }
+}
+
+@mixin contentMaxWidth() {
+  max-width: $content-maxWidth;
+}

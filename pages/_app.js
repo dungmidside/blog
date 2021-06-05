@@ -1,6 +1,34 @@
-import './styles.css'
+import "../styles/global.scss";
+import Header from "../components/Header/Header";
+import Head from "next/head";
+import React from "react";
+import "../styles/markdown.scss";
+import styles from "./index.module.scss";
 
-// This default export is required in a new `pages/_app.js` file.
 export default function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <>
+      <Head>
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;600;700&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,600;1,400&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          rel="stylesheet"
+          href="https://raw.githubusercontent.com/dracula/highlightjs/master/dracula.css"
+        />
+      </Head>
+      <div className={styles.container}>
+        <Header />
+        <div className={styles.content}>
+          <Component {...pageProps} />
+        </div>
+      </div>
+    </>
+  );
 }
