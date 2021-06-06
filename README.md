@@ -3,6 +3,7 @@
 🔗 https://dungmidside.github.io/blog/
 
 My personal blog. Build with these 🚀
+- TypeScript
 - NextJS
 - Style: SCSS + CSS Module (supported default by NextJS)
 - Write post with Markdown syntax then parse to HTML using `remark` and `remark-html`
