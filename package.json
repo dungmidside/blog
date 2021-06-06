@@ -3,7 +3,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "static": "next build && next export -o docs/"
+    "buildThenExport": "next build && next export"
   },
   "dependencies": {
     "clsx": "^1.1.1",
