@@ -9,6 +9,7 @@ export default function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
+      <link href='/favicon.ico' rel='icon' />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
           href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;600;700&display=swap"
