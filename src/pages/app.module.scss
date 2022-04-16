@@ -3,10 +3,7 @@
 .container {
   max-width: 800px;
   margin: 0 auto;
-  padding: 10px;
-  @include mediaQuery('md') {
-    padding: 50px;
-  }
+  padding: 50px 0 200px 0;
 }
 
 .title {
@@ -15,5 +12,4 @@
 }
 
 .content {
-  margin-top: 50px;
 }

@@ -1,7 +1,6 @@
-import React from "react";
-import { convertMdToHtml, getPostBySlug, getSlugs } from "../../utils/common";
-import styles from "./post.module.scss";
-import Footer from "../../components/Footer/Footer";
+import Footer from "@/components/Footer/Footer";
+import { convertMdToHtml, getPostBySlug, getSlugs } from "@/utils/common";
+import styles from "./blog.module.scss";
 
 export default function Post(props) {
   const { slug, content, title } = props;

@@ -1,9 +1,9 @@
-import "../styles/global.scss";
 import Header from "../components/Header/Header";
 import Head from "next/head";
 import React from "react";
+import styles from "./app.module.scss";
+import "../styles/global.scss";
 import "../styles/markdown.scss";
-import styles from "./index.module.scss";
 
 export default function MyApp({ Component, pageProps }) {
   return (
@@ -17,6 +17,10 @@ export default function MyApp({ Component, pageProps }) {
         <link
           href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,600;1,400&display=swap"
           rel="stylesheet"
+        />
+        <link
+          rel="stylesheet"
+          href="https://necolas.github.io/normalize.css/latest/normalize.css"
         />
         <link
           rel="stylesheet"

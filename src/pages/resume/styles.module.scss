@@ -1,19 +1,28 @@
-html {
-  overflow-y: scroll;
-}
+// body {
+//   font-family: 'Fira Code', monospace;
+//   background-color: #EBEBEB;
+// }
 
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+// a {
+//   text-decoration: none;
+//   color: #dd2020;
+//   &:visited {
+//     color: #dd2020;
+//   }
+// }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+// html,
+// body {
+//   padding: 0;
+//   margin: 0;
+//   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+//     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+// }
+
+// a {
+//   color: inherit;
+//   text-decoration: none;
+// }
 
 * {
   box-sizing: border-box;
@@ -25,6 +34,7 @@ a {
 .container {
   max-width: 700px;
   margin: 0 auto;
+  // padding: 50px 0 100px 0;
 }
 
 .header {
