@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import AvatarPng from "@/resources/avatar.png";
-import { TECHS, CONTACTS, EDUS, EXS, PROJECTS } from "./content";
+import { TECHS, CONTACTS, EDUS, EXS, PROJECTS } from "../../components/content";
 // import './styles.scss';
 
 const Section = ({ title, children }) => {
