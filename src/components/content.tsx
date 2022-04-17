@@ -71,7 +71,7 @@ export const EXS = [
     from: "09-2018",
     to: "06-2021",
     position: "Fullstack Developer",
-    company: "ELCA - Secutix",
+    company: "ELCA",
     description: (
       <div>
         <p>
@@ -109,7 +109,7 @@ export const EXS = [
     from: "07/2021",
     to: "present",
     position: "Fullstack Developer",
-    company: "Tiki - Commercial team",
+    company: "Tiki",
     description: (
       <div>
         <p>
@@ -132,6 +132,7 @@ export const EXS = [
         <p className="tags">
           <Tag>React</Tag>
           <Tag>NextJS</Tag>
+          <Tag>TypeScript</Tag>
           <Tag>NodeJS (NestJS)</Tag>
         </p>
       </div>
@@ -148,6 +149,11 @@ export const EDUS = [
 ];
 
 export const CONTACTS = [
+  {
+    icon: <Icon name="web" />,
+    label: "dungmidside.me",
+    href: 'https://dungmidside.me'
+  }, 
   {
     icon: <Icon name="email" />,
     label: "huudung096@gmail.com",

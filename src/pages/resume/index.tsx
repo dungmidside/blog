@@ -2,7 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import AvatarPng from "@/resources/avatar.png";
 import { TECHS, CONTACTS, EDUS, EXS, PROJECTS } from "../../components/content";
-// import './styles.scss';
+import styles from "./styles.module.scss";
 
 const Section = ({ title, children }) => {
   return (
@@ -39,7 +39,7 @@ const ExItem = ({ from, to, position, company, description }) => {
       <div className="exi-content">
         <div className="exc-header">
           <div className="exh-position">{position}</div>
-          <div>&nbsp;-&nbsp;</div>
+          <div className="exh-divider">&nbsp;-&nbsp;</div>
           <div className="exh-company">{company}</div>
         </div>
         <div className="exc-body">{description}</div>
@@ -72,24 +72,21 @@ const ProjectItem = ({ name, des }) => (
   </div>
 );
 
-export default function Home() {
+export default function Resume() {
   return (
-    <div className="container">
+    <div className={styles.resumeWrapper}>
       <Head>
         <title>Dungmidside</title>
-        
       </Head>
 
       <div className="header">
         <div className="h-avatar">
-          <Image src={AvatarPng} alt="img" style={{ width: 100 }} />
+          <Image src={AvatarPng} alt="img" style={{ width: 100 }} priority={true} />
         </div>
         <div className="h-info">
           <div className="i-name">Tran Huu Dung</div>
           <div className="i-position">
-            <span style={{ fontStyle: "normal", marginRight: 6 }}>
-              💻&nbsp;
-            </span>
+            <span style={{ fontStyle: "normal", marginRight: 6 }}>💻&nbsp;</span>
             Software Engineer
           </div>
         </div>
@@ -97,10 +94,17 @@ export default function Home() {
 
       <div className="body">
         <Section title="summary">
-          <span>
-            Making a nice UI/UX and fast website is my passion. I believe that
-            website is one of the best ways to make a product stand out
-          </span>
+          <div>
+            <p>
+              I had more than 4 years of web development. From static landing page websites to huge
+              micro front-end applications that serve hundreds of thousands of users.
+            </p>
+
+            <p>
+              Making a great UI/UX and also fast website is my passion. I believe that website is one of
+              the best ways to make a product stand out
+            </p>
+          </div>
         </Section>
 
         <Section title="techs">

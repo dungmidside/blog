@@ -15,7 +15,13 @@ $breakpoints: (
 );
 
 @mixin mediaQuery($size) {
-  @media (min-width: map-get($breakpoints, $size)) {
+  @media (max-width: map-get($breakpoints, $size)) {
+    @content;
+  }
+}
+
+@mixin mobile() {
+  @include mediaQuery('sm') {
     @content;
   }
 }

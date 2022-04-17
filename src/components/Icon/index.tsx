@@ -9,6 +9,7 @@ import nodePng from '@/resources/node.png';
 import nextPng from '@/resources/next.png';
 import springPng from '@/resources/spring.png';
 import nestSvg from '@/resources/nest.svg';
+import webPng from '@/resources/web.png';
 
 interface Props {
   name?: String;
@@ -37,6 +38,8 @@ const Icon: React.FunctionComponent<Props> = ({ name, style }) => {
         return springPng;
       case 'nest': 
         return nestSvg;
+      case 'web': 
+        return webPng;
       default:
         return emailPng;
     }

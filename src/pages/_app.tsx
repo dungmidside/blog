@@ -5,10 +5,20 @@ import styles from "./app.module.scss";
 import "../styles/global.scss";
 import "../styles/markdown.scss";
 
+const noOverlayWorkaroundScript = `
+  window.addEventListener('error', event => {
+    event.stopImmediatePropagation()
+  })
+
+  window.addEventListener('unhandledrejection', event => {
+    event.stopImmediatePropagation()
+  })`;
+
 export default function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
+      {process.env.NODE_ENV !== 'production' && <script dangerouslySetInnerHTML={{ __html: noOverlayWorkaroundScript }} />}
       <link href='/favicon.ico' rel='icon' />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
