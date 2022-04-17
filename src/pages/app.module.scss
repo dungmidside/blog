@@ -7,6 +7,9 @@
   @include mobile() {
     padding: 30px 10px;
   }
+  @include print() {
+    padding: 0;
+  }
 }
 
 .title {

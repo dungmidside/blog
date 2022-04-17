@@ -20,6 +20,12 @@ $breakpoints: (
   }
 }
 
+@mixin print() {
+  @media print {
+    @content;
+  }
+}
+
 @mixin mobile() {
   @include mediaQuery('sm') {
     @content;
