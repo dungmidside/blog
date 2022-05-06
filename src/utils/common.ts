@@ -3,8 +3,8 @@ import fs from "fs";
 import path from "path";
 import remark from "remark";
 import remarkHtml from "remark-html";
-import highlight from 'remark-highlight.js';
-import Post from "../types/Post";
+import highlight from "remark-highlight.js";
+import Post from "@/types/Post";
 
 const POST_FOLDER_PATH = path.join(process.cwd(), "posts");
 
@@ -17,6 +17,7 @@ export const getAllPosts = (): Post[] =>
     return {
       slug: data.slug,
       title: data.title,
+      des: data.des,
       date: data.date,
       content,
     };
@@ -24,8 +25,9 @@ export const getAllPosts = (): Post[] =>
 
 export const getSlugs = () => getAllPosts().map((p) => p.slug);
 
-export function getPostBySlug(slug) {
+export function getPostBySlug(slug: string): Post | undefined {
   return getAllPosts().find((p) => p.slug === slug);
 }
 
-export const convertMdToHtml = async (str) => await remark().use(highlight).use(remarkHtml).process(str);
+export const convertMdToHtml = async (str: string) =>
+  await remark().use(highlight).use(remarkHtml).process(str);

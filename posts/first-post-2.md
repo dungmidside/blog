@@ -1,5 +1,6 @@
 ---
 title: How to create a component in React ?
+des: des for post-2
 slug: post-2
 date: May 5th 2021
 ---

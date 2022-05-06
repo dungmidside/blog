@@ -1,28 +1,26 @@
 import Footer from "@/components/Footer/Footer";
+import BlogPost from "@/components/Post";
+import Post from "@/types/Post";
 import { convertMdToHtml, getPostBySlug, getSlugs } from "@/utils/common";
+import { GetStaticProps } from "next";
+import { ParsedUrlQuery } from "querystring";
 import styles from "./blog.module.scss";
 
-export default function Post(props) {
-  const { slug, content, title } = props;
-  return (
-    <div className={styles.wrapper}>
-      <h1 className={styles.title}>{title}</h1>
-      <div className={styles.content}>
-        <span className="markdown-content" dangerouslySetInnerHTML={{ __html: content }} />
-      </div>
-      <Footer />
-    </div>
-  );
+export default function BlogPostSlug(post: Post) {
+  return <BlogPost post={post} />
 }
 
-export async function getStaticProps(props) {
-  const { slug } = props.params;
+interface IParams extends ParsedUrlQuery {
+  slug: string
+}
+
+export const getStaticProps: GetStaticProps = async (props) => {
+  const { slug } = props.params as IParams;
   const post = getPostBySlug(slug);
-  const htmlContent = await convertMdToHtml(post.content);
+  const htmlContent = await convertMdToHtml(post?.content || '');
   return {
     props: {
-      slug: slug,
-      title: post.title,
+      ...post,
       content: htmlContent.toString(),
     },
   };

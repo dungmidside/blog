@@ -206,7 +206,7 @@ export const PROJECTS = [
           client.
         </p>
         <p>
-          I"m in charge for all front-end of the website that have some unique
+          I'm in charge for all front-end of the website that have some unique
           features:
           <ul style={{ marginLeft: 8 }}>
             <li>Client template printing</li>

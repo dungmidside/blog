@@ -1,17 +1,17 @@
-import PostTitle from '@/components/PostTitle/PostTitle';
-import { getAllPosts } from '@/utils/common';
-import React from 'react';
+import PostTitle from "@/components/PostTitle";
+import Post from "@/types/Post";
+import { getAllPosts } from "@/utils/common";
+import React from "react";
 
-const Blog = ({ posts }) => {
+const Blog = ({ posts }: { posts: Post[] }) => {
   return (
-    <div>
+    <div className="grid grid-cols-1 gap-8">
       {posts.map((p) => (
         <PostTitle post={p} />
       ))}
     </div>
   );
 };
-
 
 export async function getStaticProps() {
   const posts = getAllPosts();
@@ -21,6 +21,5 @@ export async function getStaticProps() {
     },
   };
 }
-
 
 export default Blog;

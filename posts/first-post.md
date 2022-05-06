@@ -1,8 +1,11 @@
 ---
 title: Tips for front-end to improve react performance
+des: des for post-1
 slug: post-1
 date: May 5th 2021
 ---
+Let talk about react
+
 Summer is almost here! It’s the perfect time to dust off those shorty shorts, drop some booze in the blender, and plan a trip to the great outdoors! And whether you’re looking to ogle a herd of buffalo around Old Faithful, or snap that perfect selfie at the South Rim, there is no summer tradition more time-honored than a trip to a national park.
 
 ![img](https://miro.medium.com/max/4032/1*hWhjR0nY9clgN9TnP17JEA.jpeg)
