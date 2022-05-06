@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 
-const Tag = ({ children }) => {
+const Tag = ({ children }: { children: ReactNode }) => {
   return (
     <span className='tag'>
       {children}
