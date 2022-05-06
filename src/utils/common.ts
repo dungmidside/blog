@@ -3,6 +3,7 @@ import fs from "fs";
 import path from "path";
 import remark from "remark";
 import remarkHtml from "remark-html";
+// @ts-ignore
 import highlight from "remark-highlight.js";
 import Post from "@/types/Post";
 

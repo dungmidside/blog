@@ -14,7 +14,7 @@ const noOverlayWorkaroundScript = `
     event.stopImmediatePropagation()
   })`;
 
-export default function MyApp({ Component, pageProps }) {
+export default function MyApp({ Component, pageProps }: any) {
   return (
     <>
       <Head>

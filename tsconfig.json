@@ -19,6 +19,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/pages/resume/content.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/pages/resume/content.js", "src/pages/resume/index.js"],
   "exclude": ["node_modules"]
 }
